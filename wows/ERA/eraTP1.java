@@ -5,29 +5,33 @@
 */
 
 
-import java.util.LinkedList;
+
+import java.util.ArrayList;
 import java.util.Scanner;
 
 public class eraTP1 {
     public static void main(String[] args) {
         Scanner scan = new Scanner(System.in);
-        LinkedList<Integer> listNum = new LinkedList<>();
+
+        ArrayList<Integer> listNum = new ArrayList<>();
         listNum.add(1);
         listNum.add(2);
         listNum.add(3);
-        // printing before adding the numbers
+
         System.out.println("before input");
-        for (int i = 0; i < listNum.size(); i++) {System.out.println(listNum.get(i));}
+        for (int num : listNum) {
+            System.out.println(num);
+        }
+
         System.out.println("getting input");
-        for(int i=0;i<listNum.size();i++){
+        while (listNum.size() < 6) {
             int input = scan.nextInt();
             listNum.add(input);
-            if(listNum.size()==6){
-                break;
-            }
         }
-        System.out.println("after input");
-        for (int i = 0; i < listNum.size(); i++) {System.out.println(listNum.get(i));}
 
+        System.out.println("after input");
+        for (int num : listNum) {
+            System.out.println(num);
+        }
     }
 }
