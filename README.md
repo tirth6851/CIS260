@@ -115,4 +115,4 @@ This project is for educational purposes as part of CIS260 coursework at Clevela
 
 ---
 
-*Last Updated: February 24, 2026*
+*Last Updated: February 2026*
