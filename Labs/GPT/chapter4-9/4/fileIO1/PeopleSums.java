@@ -51,7 +51,7 @@ public class PeopleSums {
             // 3c) Write formatted line to results.txt
             // Use printf like before
             // TODO: outFS.printf("Hi I am %s, ...",  ???  );
-            outFS.println(name+","+age+","+sum);
+            outFS.printf("Hi I am %s | Age: %d | Sum: %d%n", name, age, sum);
         }
 
         // 4) Close streams
