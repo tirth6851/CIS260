@@ -29,12 +29,13 @@ public class WordCounter {
         // TODO: create FileInputStream with fileName
         // TODO: create Scanner inFS from that stream
         FileInputStream file = new FileInputStream(fileName);
-        Scanner inFS = new Scanner(file);
+        inFS = new Scanner(file);
 
         // 3) Open counts.txt for writing
         // TODO: create FileOutputStream for "counts.txt"
         // TODO: create PrintWriter outFS from that stream
-        inStream = new FileInputStream(fileName);
+        outStream = new FileOutputStream("count.txt");
+        outFS = new PrintWriter(outStream);
 
         // 4) Loop through all words in the input file
         // Hint: use inFS.hasNext() and inFS.next()
@@ -42,16 +43,22 @@ public class WordCounter {
         //          read currWord
         //          if it equals searchWord, increment count
 
+        while(inFS.hasNextLine()) {
+            currWord = inFS.nextLine();
+            if(currWord.equals(searchWord)) {count++;}
+        }
+
+
         // 5) Build result sentence
         // Example: apple appears 2 times.
         String result = searchWord + " appears " + count + " times.";
 
         // 6) Print to screen
         // TODO: System.out.println(result);
-
+        System.out.println(result);
         // 7) Print to counts.txt
         // TODO: outFS.println(result);
-
+        outFS.println(result);
         // 8) Close everything
         kb.close();
         inFS.close();
