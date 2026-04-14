@@ -1,0 +1,3 @@
+tirth 17 67 67
+nancy 19 50 24
+gracy 22 13 14
